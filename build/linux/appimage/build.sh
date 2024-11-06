@@ -19,6 +19,8 @@ if [[ "${VSCODE_ARCH}" == "x64" ]]; then
 
   chmod +x ./pkg2appimage.AppImage
 
+  export ARCH=x86_64
+
   ./pkg2appimage.AppImage --appimage-extract && mv ./squashfs-root ./pkg2appimage.AppDir
 
   # add update's url
